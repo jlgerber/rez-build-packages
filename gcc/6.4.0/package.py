@@ -27,7 +27,7 @@ tools = [
     "x86_64-pc-linux-gnu-gfortran"
         ]
 
-has_plugins = True
+#has_plugins = True
 
 uuid = "repository.gcc"
 
@@ -42,9 +42,9 @@ def version_p():
     return os.path.basename(os.path.abspath(os.getcwd())).split(".")
 
 def commands():
-    env.GCC_INCLUDE_PATH = {root}/include
-    env.GCC_LIBRARY_PATH = {root}/lib64 
+    env.GCC_INCLUDE_PATH = "{root}/include"
+    env.GCC_LIBRARY_PATH = "{root}/lib64" 
     env.LD_LIBRARY_PATH.append("${GCC_LIBRARY_PATH}")
     env.MANPATH.append("{root}/share/info")
     env.INFOPATH.append("{root}/share/info")
-
+    env.PATH.prepend("{root}/bin")
