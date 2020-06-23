@@ -42,9 +42,9 @@ def version_p():
     return os.path.basename(os.path.abspath(os.getcwd())).split(".")
 
 def commands():
-    env.GCC_INCLUDE_PATH = "{root}/include"
-    env.GCC_LIBRARY_PATH = "{root}/lib64" 
+    env.GCC_INCLUDE_PATH = "{root}/app/include"
+    env.GCC_LIBRARY_PATH = "{root}/app/lib64" 
     env.LD_LIBRARY_PATH.append("${GCC_LIBRARY_PATH}")
-    env.MANPATH.append("{root}/share/info")
-    env.INFOPATH.append("{root}/share/info")
-    env.PATH.prepend("{root}/bin")
+    env.MANPATH.append("{root}/app/share/info")
+    env.INFOPATH.append("{root}/app/share/info")
+    env.PATH.prepend("{root}/app/bin")
