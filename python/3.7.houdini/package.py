@@ -4,7 +4,10 @@ name = 'python'
 
 version = '3.7.houdini'
 
-variants = [['platform-linux', 'arch-x86_64', 'os-Pop-21.10']]
+variants = [
+            ['platform-linux', 'arch-x86_64', 'os-Pop-21.10'],
+            ['platform-linux', 'arch-x86_64', 'os-Pop-22.04'],
+        ]
 
 build_command = "python {root}/build_cmd.py {install}"
 
