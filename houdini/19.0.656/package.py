@@ -60,11 +60,11 @@ def version_p():
     import os
     return os.path.basename(os.path.abspath(os.getcwd())).split(".")
 
-def pre_commands():
-    if building:
-        print("building")
+#def pre_commands():
+#    if building:
+#        print("building")
         #env.PYTHONHOME="/home/jgerber/packages/houdini/19.0.587/platform-linux/arch-x86_64/python-3.7.houdini/app/python"
-        env.PYTHONHOME="/home/jgerber/packages/houdini/19.0.656/platform-linux/arch-x86_64/python-3.7.houdini/app/python"
+#        env.PYTHONHOME="/home/jgerber/packages/houdini/19.0.656/platform-linux/arch-x86_64/python-3.7.houdini/app/python"
 
 def commands():
     env.HFS = "{root}/app"
