@@ -61,10 +61,13 @@ def version_p():
     import os
     return os.path.basename(os.path.abspath(os.getcwd())).split(".")
 
-#def pre_commands():
-#    if building:
-#        print("building")
-#        env.PYTHONHOME="/home/jgerber/packages/houdini/19.5.333/platform-linux/arch-x86_64/python-3.9.houdini/app/python"
+def pre_commands():
+    if building:
+        print("building")
+        #env.PYTHONHOME="/home/jgerber/packages/houdini/19.5.333/platform-linux/arch-x86_64/python-3.9.houdini/app/python"
+def pre_build_commands():
+        print("prebuild")
+        #env.PYTHONHOME="/home/jgerber/packages/houdini/19.5.333/platform-linux/arch-x86_64/python-3.9.houdini/app/python"
 
 def commands():
     env.HFS = "{root}/app"
@@ -89,3 +92,4 @@ def commands():
     env.HOUDINI_BUILD_PLATFORM ="Red Hat Enterprise Linux Workstation release 7.9 (Maipo)"
     env.HOUDINI_BUILD_COMPILER="9.3.1"
     env.HOUDINI_BUILD_LIBC="glibc 2.17"
+    env.HOUDINI_PYTHON_PANEL_PATH="&"
