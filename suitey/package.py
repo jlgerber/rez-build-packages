@@ -7,7 +7,7 @@ tools = []
 
 uuid = "repository.suitey"
 
-version = "lams"
+version = "houd"
 
 def commands():    
     env.PATH.append("/home/jgerber/suites/{version}/bin")
