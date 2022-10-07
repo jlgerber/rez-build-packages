@@ -89,3 +89,4 @@ def commands():
     env.HOUDINI_BUILD_PLATFORM ="Red Hat Enterprise Linux Workstation release 7.9 (Maipo)"
     env.HOUDINI_BUILD_COMPILER="9.3.1"
     env.HOUDINI_BUILD_LIBC="glibc 2.17"
+    env.HOUDINI_OTLSCAN_PATH="&"
