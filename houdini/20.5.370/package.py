@@ -1,7 +1,7 @@
 name = "houdini"
 
 variants = [
-    ["platform-linux", "arch-x86_64", "python-3.10.houdini"]
+    ["platform-linux", "arch-x86_64", "python-3.11.houdini"]
 ]
 
 build_command = "python {root}/build_cmd.py {install}"

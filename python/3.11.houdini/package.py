@@ -2,10 +2,12 @@
 
 name = 'python'
 
-version = '3.10.houdini'
+@early()
+def version():
+    import os
+    return os.path.basename(os.path.abspath(os.getcwd()))
 
 variants = [
-            #['platform-linux', 'arch-x86_64', 'os-Pop-21.10'],
             ['platform-linux', 'arch-x86_64', 'os-Pop-22.04'],
         ]
 
@@ -14,7 +16,6 @@ build_command = "python {root}/build_cmd.py {install}"
 uuid = "external.python"
 
 def commands():
-    #env.PATH.append('{this.root}/bin')
     pass
 
 def post_commands():
