@@ -27,7 +27,7 @@ def pre_build_commands():
     env.PATH.append("{root}/app")
     env.BLENDER_MAJOR=this.version_p[0]
     env.BLENDER_MINOR=this.version_p[1]
-    env.BLENDER_PATH=this.version_p[2]
+    env.BLENDER_PATCH=this.version_p[2]
     env.BLENDER_USER_CONFIG = "~/blender/${BLENDER_MAJOR}.${BLENDER_MINOR}/config"
     env.BLENDER_USER_SCRIPTS= "~/blender/${BLENDER_MAJOR}.${BLENDER_MINOR}/scripts"
 
@@ -35,6 +35,10 @@ def commands():
     env.PATH.append("{root}/app")
     env.BLENDER_MAJOR=this.version_p[0]
     env.BLENDER_MINOR=this.version_p[1]
-    env.BLENDER_PATH=this.version_p[2]
+    env.BLENDER_PATCH=this.version_p[2]
     env.BLENDER_USER_CONFIG = "~/blender/${BLENDER_MAJOR}.${BLENDER_MINOR}/config"
     env.BLENDER_USER_SCRIPTS= "~/blender/${BLENDER_MAJOR}.${BLENDER_MINOR}/scripts"
+
+def post_commands():
+    if "PYTHONPATH" in env:
+        env.BLENDER_PYTHONPATH.set(env.PYTHONPATH)
