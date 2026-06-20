@@ -8,7 +8,7 @@ def version():
     return os.path.basename(os.path.abspath(os.getcwd()))
 
 variants = [
-            ['platform-linux', 'arch-x86_64', 'os-Pop-22.04'],
+            ['platform-linux', 'arch-x86_64', 'os-Pop-24.04'],
         ]
 
 build_command = "python {root}/build_cmd.py {install}"
